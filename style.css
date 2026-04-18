@@ -1,0 +1,85 @@
+/* Configuración Global */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --vitamex-purple: #4a148c; /* Morado profundo del logo */
+    --vitamex-gold: #c1a677;   /* Dorado de los laureles y detalles */
+    --vitamex-green: #2e8b57;  /* Verde de las hojas laterales */
+    --vitamex-light-bg: #fdfaf5; /* Crema suave para fondo */
+    --vitamex-text: #2d2d2d;
+}
+
+body {
+    background-color: var(--vitamex-light-bg);
+    font-family: 'Poppins', Arial, sans-serif;
+    color: var(--vitamex-text);
+}
+
+/* Navegación */
+.navbar-vitamex {
+    background-color: var(--vitamex-purple) !important;
+    border-bottom: 4px solid var(--vitamex-gold);
+}
+
+.vitamex-logo-header {
+    height: 120px;
+    width: 120px; /* Aseguramos que el ancho sea igual al alto */
+    aspect-ratio: 1 / 1; /* Garantiza que siempre sea un cuadrado */
+    object-fit: cover; /* Centra la imagen dentro del círculo sin deformarla */
+    border: 2px solid var(--vitamex-gold);
+    border-radius: 50%;
+    background-color: white;
+    display: block; /* Evita espacios extra debajo de la imagen */
+    padding: 2px; /* Añade espacio entre el logo y el borde dorado */
+}
+
+.text-gold {
+    color: var(--vitamex-gold) !important;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.row {
+    letter-spacing: 10%;
+}
+
+/* Tarjetas */
+.card-header-vitamex {
+    background-color: var(--vitamex-purple) !important;
+    color: var(--vitamex-gold) !important;
+    font-weight: bold;
+}
+
+/* Botones */
+.btn-vitamex-save {
+    background-color: var(--vitamex-green);
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.btn-vitamex-save:hover {
+    background-color: #246d45;
+    color: var(--vitamex-gold);
+}
+
+.btn-vitamex-update {
+    background-color: var(--vitamex-gold);
+    color: var(--vitamex-purple);
+    font-weight: bold;
+}
+
+/* Tablas */
+.table-vitamex thead th {
+    background-color: #f2eef7;
+    color: var(--vitamex-purple);
+    border-bottom: 2px solid var(--vitamex-gold);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.text-vitamex {
+    color: var(--vitamex-purple);
+}

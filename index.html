@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITAMEX S.A. de C.V. - Gestión de Inventarios</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-dark navbar-vitamex shadow-sm mb-4">
+    <div class="container d-flex align-items-center">
+       <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="assets/logo.jpg" alt="Logo VITAMEX" class="vitamex-logo-header me-3">
+            <div>
+                <span class="d-block h4 mb-0">VITAMEX S.A. de C.V.</span>
+                <small class="text-gold">Panel de Control de Suministros</small>
+            </div>
+        </a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row g-4">
+        <div class="col-lg-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-header card-header-vitamex text-center">
+                    REGISTRAR MOVIMIENTO
+                </div>
+                <div class="card-body">
+                    <form id="formMovimiento">
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Producto (Catálogo)</label>
+                            <select id="idProducto" class="form-select" required>
+                                <option value="">Cargando catálogo...</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Tipo de Operación</label>
+                            <select id="tipo" class="form-select">
+                                <option value="Entrada">Entrada (Abastecimiento)</option>
+                                <option value="Salida">Salida (Consumo)</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Cantidad</label>
+                            <input type="number" id="cantidad" class="form-control" min="1" placeholder="0" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Departamento Solicitante</label>
+                            <select id="departamento" class="form-select" required>
+                                <option value="">Cargando áreas...</option>
+                            </select>
+                        </div>
+
+                       <div class="mb-3">
+                            <label class="form-label fw-bold">Responsable</label>
+                            <select id="responsable" class="form-select" required>
+                                <option value="">Cargando personal...</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-vitamex-save w-100 py-2">
+                            CONFIRMAR REGISTRO
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <div class="card shadow-sm h-100">
+                <div class="card-header card-header-vitamex d-flex justify-content-between align-items-center">
+                    INVENTARIO EN TIEMPO REAL
+                    <button class="btn btn-sm btn-vitamex-update" onclick="cargarInventario()" id="btnActualizar">
+                        🔄 Actualizar Datos
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-vitamex align-middle">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Descripción del Producto</th>
+                                    <th class="text-center">Existencia</th>
+                                    <th>Última Área</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaCuerpo">
+                                </tbody>
+                        </table>
+                    </div>
+                    <div id="loader" class="text-center d-none my-4">
+                        <div class="spinner-border text-vitamex" role="status"></div>
+                        <p class="mt-2 text-muted">Sincronizando con base de datos...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center mt-5 mb-3 text-muted">
+    <small>© 2026 VITAMEX S.A. de C.V. - Sistema de Gestión Interna</small>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+</body>
+</html>

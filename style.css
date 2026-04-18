@@ -29,7 +29,7 @@ body {
 
 .vitamex-logo-bg {
     width: 75px; height: 75px;
-    background-image: url('logo.jpg');
+    background-image: url('/assets/logo.jpg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
